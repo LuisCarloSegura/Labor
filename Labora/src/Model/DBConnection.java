@@ -12,6 +12,7 @@ public class DBConnection {
     static String url = "jdbc:postgresql://localhost:" + port + "/" + bd;
     Connection connection = null;
     
+    // conexion con la base de datos
     public DBConnection() {
         try {
             Class.forName("org.postgresql.Driver");
@@ -27,7 +28,7 @@ public class DBConnection {
     public Connection getConnection() {
         return connection;
     }
-    
+    // metodo para desconectar
     public void disconnect() {
         if (connection != null) {
             try {
