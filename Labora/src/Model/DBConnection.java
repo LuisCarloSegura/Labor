@@ -28,7 +28,8 @@ public class DBConnection {
     public Connection getConnection() {
         return connection;
     }
-    // metodo para desconectar
+   
+    // metodo para cerrar la conexion
     public void disconnect() {
         if (connection != null) {
             try {
